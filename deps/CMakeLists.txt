@@ -159,7 +159,7 @@ if (NOT TARGET nanoflann)
     file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/nanoflann)
     file(CREATE_LINK
         ${CMAKE_CURRENT_SOURCE_DIR}/nanoflann/include/nanoflann.hpp
-        ${CMAKE_CURRENT_BINARY_DIR}/include/nanoflann/nanoflann.hpp SYMBOLIC)
+        ${CMAKE_CURRENT_BINARY_DIR}/include/nanoflann/nanoflann.hpp COPY_ON_ERROR SYMBOLIC)
     target_include_directories(nanoflann INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>)
 endif()
 
